@@ -1,17 +1,18 @@
 package com.example.rocketcode_test.service;
 
-import com.example.rocketcode_test.persistence.model.Task;
+import com.example.rocketcode_test.web.dto.request.TaskRequest;
+import com.example.rocketcode_test.web.dto.response.TaskResponse;
 
 import java.util.List;
 
 public interface ITaskService {
-    int save(Task task);
+    int create(TaskRequest task);
 
-    int update(Long id, Task task);
+    int update(Long id, TaskRequest task);
 
-    List<Task> findAll();
+    List<TaskResponse> findAll();
 
-    Task findById(Long id);
+    TaskResponse findById(Long id);
 
     int deleteById(Long id);
 }

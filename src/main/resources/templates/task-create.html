@@ -16,12 +16,21 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .text-danger {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="col-md-8 mx-auto form-container">
         <h1 class="text-center">Crear tarea</h1>
+
+        <!-- Mostrar el mensaje de error si existe -->
+        <div class="alert alert-danger" th:if="${errorMessage != null}">
+            <span th:text="${errorMessage}"></span>
+        </div>
+
         <form action="/task-create" method="post">
             <div class="form-group">
                 <label for="name">Nombre:</label>
@@ -42,6 +51,5 @@
         </form>
     </div>
 </div>
-
 </body>
 </html>

@@ -1,15 +1,18 @@
-package com.example.rocketcode_test.controller;
+package com.example.rocketcode_test.web.controller;
 
-import com.example.rocketcode_test.persistence.model.Task;
 import com.example.rocketcode_test.service.ITaskService;
+import com.example.rocketcode_test.web.dto.request.TaskRequest;
+import com.example.rocketcode_test.web.dto.response.TaskResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -29,14 +32,19 @@ public class TaskController {
     }
 
     @PostMapping("/task-create")
-    public String createTask(@ModelAttribute Task task) {
-        taskService.save(task);
+    public String createTask(@Valid @ModelAttribute TaskRequest request, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            String errorMessage = result.getAllErrors().get(0).getDefaultMessage();
+            model.addAttribute("errorMessage", errorMessage);
+            return "task-create";
+        }
+        taskService.create(request);
         return "redirect:/task-list";
     }
 
     @GetMapping("/task-list")
     public String listTasks(Model model) {
-        List<Task> tasks = taskService.findAll();
+        List<TaskResponse> tasks = taskService.findAll();
         model.addAttribute("tasks", tasks);
         return "task-list";
     }
