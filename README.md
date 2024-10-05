@@ -1,4 +1,4 @@
-# Aplicación de Gestión de Tareas
+# Gestión de Tareas
 
 Esta es una aplicación web simple desarrollada con **Java 8**, **Spring Boot MVC**, **MyBatis** para ORM, y **Bootstrap**. La aplicación permite a los usuarios crear y listar tareas a través de una interfaz sencilla y amigable.
 
