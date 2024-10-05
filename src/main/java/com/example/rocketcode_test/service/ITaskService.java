@@ -7,11 +7,11 @@ import java.util.List;
 public interface ITaskService {
     int save(Task task);
 
-    int update(int id, Task task);
+    int update(Long id, Task task);
 
     List<Task> findAll();
 
-    Task findById(int id);
+    Task findById(Long id);
 
-    int deleteById(int id);
+    int deleteById(Long id);
 }

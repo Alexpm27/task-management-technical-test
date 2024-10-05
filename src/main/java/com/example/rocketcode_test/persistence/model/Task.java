@@ -10,11 +10,11 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task {
-    int id;
+    private Long id;
 
-    String name;
+    private String name;
 
-    String description;
+    private String description;
 
-    LocalDate startDate;
+    private LocalDate startDate;
 }

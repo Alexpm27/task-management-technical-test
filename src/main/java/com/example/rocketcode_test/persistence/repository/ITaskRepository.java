@@ -19,8 +19,8 @@ public interface ITaskRepository {
 
     @Select("SELECT * FROM Task WHERE id = #{id}")
     @Result(property = "startDate", column = "start_date")
-    Task findById(@Param("id") int id);
+    Task findById(@Param("id") Long id);
 
     @Delete("DELETE FROM Task WHERE id = #{id}")
-    int deleteById(@Param("id") int id);
+    int deleteById(@Param("id") Long id);
 }

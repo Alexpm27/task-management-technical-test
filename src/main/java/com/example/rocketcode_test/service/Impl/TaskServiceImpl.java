@@ -19,7 +19,7 @@ public class TaskServiceImpl implements ITaskService {
     }
 
     @Override
-    public int update(int id, Task task) {
+    public int update(Long id, Task task) {
         task.setId(id);
         return repository.update(task);
     }
@@ -30,12 +30,12 @@ public class TaskServiceImpl implements ITaskService {
     }
 
     @Override
-    public Task findById(int id) {
+    public Task findById(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public int deleteById(int id) {
+    public int deleteById(Long id) {
         return repository.deleteById(id);
     }
 }
