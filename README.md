@@ -72,7 +72,7 @@ Visita http://localhost:8080 para ver la pantalla de bienvenida.
 Haz clic en el botón Agregar nueva tarea para ir al formulario de creación de tareas.
 
 #### Crear Tarea
-Completa los campos Nombre, Descripción, y Fecha de inicio.
+Completa los campos Nombre, Descripción, y Fecha de inicio(una fecha presente o futura).
 [![Screenshot-2024-10-05-at-4-45-17-a-m.png](https://i.postimg.cc/CMJJNtc3/Screenshot-2024-10-05-at-4-45-17-a-m.png)](https://postimg.cc/Rq6cCP5d)
 Haz clic en Agregar para registrar la tarea.
 
