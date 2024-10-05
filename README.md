@@ -29,12 +29,12 @@ Para ejecutar la aplicación, asegúrate de tener instalados los siguientes comp
 
 ## Instalación
 
-### 1. Clonar el repositorio
+#### 1. Clonar el repositorio
 
 
 `git clone https://github.com/Alexpm27/task-management-technical-test`
 
-###2. Configurar la base de datos
+#### 2. Configurar la base de datos
 Asegúrate de tener una base de datos MySQL y configurar las credenciales en el archivo `application.properties`:
 
 ```properties
@@ -50,14 +50,14 @@ También debes crear la base de datos en MySQL:
 ```sql
 CREATE DATABASE task_db;
 ```
-###3. Instalar dependencias
+#### 3. Instalar dependencias
 Usa Maven para descargar las dependencias del proyecto.
 
 
 ```bash
 mvn clean install
 ```
-###4. Ejecutar la aplicación
+#### 4. Ejecutar la aplicación
 Puedes ejecutar la aplicación con el siguiente comando:
 
 ```bash
@@ -65,18 +65,18 @@ mvn spring-boot:run
 ```
 La aplicación estará disponible en http://localhost:8080.
 
-##Uso
-###Página de Inicio
+## Uso
+#### Página de Inicio
 Visita http://localhost:8080 para ver la pantalla de bienvenida.
 [![Screenshot-2024-10-05-at-4-43-53-a-m.png](https://i.postimg.cc/RFLd2b4n/Screenshot-2024-10-05-at-4-43-53-a-m.png)](https://postimg.cc/G89vyKBc)
 Haz clic en el botón Agregar nueva tarea para ir al formulario de creación de tareas.
 
-###Crear Tarea
+#### Crear Tarea
 Completa los campos Nombre, Descripción, y Fecha de inicio.
 [![Screenshot-2024-10-05-at-4-45-17-a-m.png](https://i.postimg.cc/CMJJNtc3/Screenshot-2024-10-05-at-4-45-17-a-m.png)](https://postimg.cc/Rq6cCP5d)
 Haz clic en Agregar para registrar la tarea.
 
-###Listado de Tareas
+#### Listado de Tareas
 Después de agregar una tarea, se te redirigirá automáticamente al Listado de Tareas.
 [![Screenshot-2024-10-05-at-4-45-33-a-m.png](https://i.postimg.cc/653c10Sy/Screenshot-2024-10-05-at-4-45-33-a-m.png)](https://postimg.cc/s1k5Mp3r)
 Desde esta página, puedes ver todas las tareas registradas.
