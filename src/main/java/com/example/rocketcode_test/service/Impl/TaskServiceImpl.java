@@ -12,30 +12,30 @@ import java.util.List;
 public class TaskServiceImpl implements ITaskService {
 
     @Autowired
-    private ITaskRepository mapper;
+    private ITaskRepository repository;
     @Override
     public int save(Task task) {
-        return mapper.save(task);
+        return repository.save(task);
     }
 
     @Override
     public int update(int id, Task task) {
         task.setId(id);
-        return mapper.update(task);
+        return repository.update(task);
     }
 
     @Override
     public List<Task> findAll() {
-        return mapper.findAll();
+        return repository.findAll();
     }
 
     @Override
     public Task findById(int id) {
-        return mapper.findById(id);
+        return repository.findById(id);
     }
 
     @Override
     public int deleteById(int id) {
-        return mapper.deleteById(id);
+        return repository.deleteById(id);
     }
 }
