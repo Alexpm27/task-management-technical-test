@@ -1,14 +1,13 @@
 package com.example.rocketcode_test.persistence.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter @Setter
 public class Task {
     private Long id;
 
