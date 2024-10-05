@@ -37,7 +37,7 @@ Para ejecutar la aplicación, asegúrate de tener instalados los siguientes comp
 #### 2. Configurar la base de datos
 Asegúrate de tener una base de datos MySQL y configurar las credenciales en el archivo `application.properties`:
 
-```properties
+``` properties
 spring.datasource.url=jdbc:mysql://localhost:3306/task_db
 spring.datasource.username=root
 spring.datasource.password=tu_contraseña
@@ -47,20 +47,20 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 También debes crear la base de datos en MySQL:
 
 
-```sql
+``` sql
 CREATE DATABASE task_db;
 ```
 #### 3. Instalar dependencias
 Usa Maven para descargar las dependencias del proyecto.
 
 
-```bash
+``` bash
 mvn clean install
 ```
 #### 4. Ejecutar la aplicación
 Puedes ejecutar la aplicación con el siguiente comando:
 
-```bash
+``` bash
 mvn spring-boot:run
 ```
 La aplicación estará disponible en http://localhost:8080.
